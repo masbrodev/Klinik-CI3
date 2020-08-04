@@ -1,7 +1,7 @@
 <div class="main-content-inner">
     <div class="row">
 
-        <div class="col-lg-8 mt-5">
+        <div class="col-lg-9 mt-5">
             <div class="card">
                 <div class="card-body">
                     <!--<h4 class="header-title">Detail Pendaftaran</h4>-->
@@ -35,6 +35,11 @@
                                         <td>:</td>
                                         <td><?= $pasien->kelamin ?></td>
                                     </tr>
+                                    <tr class="table-danger">
+                                        <th scope="row">Status</th>
+                                        <td>:</td>
+                                        <td><?= $pasien->status ?></td>
+                                    </tr>
                                     <tr class="table-warning">
                                         <th scope="row">Keluhan</th>
                                         <td>:</td>
@@ -57,13 +62,13 @@
             <div class="card">
                 <div class="card-body">
                     <!--<h4 class="header-title">Textual inputs</h4>-->                            
-                    <form action="<?= base_url() . 'c_daftar/cetak' ?>" method="post">
+                    <form action="<?= base_url() . 'C_daftar/cetak' ?>" method="post">
                         <!--<div class="form-group">-->
                             <input name="id_pasien" value="<?= $pasien->id_pendaftaran ?>" type="hidden">
                         <!--</div>-->
                         <div class="form-group">
                         <!--<input type="submit" name="bt_cetak" class="btn btn-rounded btn-primary mb-3" value="Cetak">-->
-                            <a href="<?= base_url() . 'c_daftar/cetak/' . $pasien->id_pendaftaran ?>" target="_blank" class="btn btn-rounded btn-primary"><i class="icon fa fa-print"></i> Cetak</a>
+                            <a href="<?= base_url() . 'C_daftar/cetak/' . $pasien->id_pendaftaran ?>" target="_blank" class="btn btn-rounded btn-primary"><i class="icon fa fa-print"></i> Cetak</a>
                             <!--<a href="<?php // base_url() . 'c_daftar' ?>" class="btn btn-rounded btn-danger mb-3">Kembali</a>-->
                         </div>
                     </form>

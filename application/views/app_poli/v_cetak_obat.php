@@ -29,20 +29,32 @@
         </style>
     </head>
 <body>        
-<table border="1" cellpadding="5" cellspacing="2" width="540" height="370" align="left">
+<table border="1" cellpadding="5" cellspacing="2" width="500" height="500" align="center">
 <tr>
-<td align="left" valign="top" colspan="2">
+<td align="center" valign="top" colspan="2">
     <!--===getHeader()=======================================================-->
     <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-            <td width="15%" align="center">
-                <img src="<?php echo base_url() ?>assets/images/logohtm.png"/>
+            <td width="15%" align="center" >
+                <img src="<?php echo base_url() ?>assets/images/logoklnk.png"/>
             </td>
-            <td valign="top" align='left'>
-                <font size="3" style="font-family: Georgia"><strong>RESEP OBAT KLINIK AZ-ZAINIYAH</strong></font><br/>
-                <font size="3" style="font-family: Georgia">PONDOK PESANTREN NURUL JADID</font><br/>
-                <font size="3" style="font-family: Tahoma">PAITON PROBOLINGGO 2020</font><br/>
+            <td valign="top" align='center' colspan="2">
+                <font size="5" style="font-family: Georgia"><strong>YAYASAN NURUL JADID</strong></font><br/>
+                <font size="5" style="font-family: Georgia">KLINIK AZ-ZAINIYAH</font><br/>
+                <font size="1" style="font-family: Times New Rowmen">PAITON PROBOLINGGO 67291 TELP.(0335) 771959 FAX 771406</font><br/>
             </td>
+        </tr>
+
+        <!-- Status dan dokter -->
+        <tr height="55">
+            <td></td>
+            <td valign="bottom" align="left" >Status : <strong> <?= $c->status ?></strong> </td>  
+            <td align="left" width="35%">Dokter</td>
+        </tr>
+        <tr height="30">
+            <td></td>
+            <td valign="top" align='center' style="font-family: Monotype Corsiva; font-size: 25px; padding-top: 5px;"></td>
+            <td valign="bottom"><strong>( <?= $c->nama_dokter ?> )</strong></td>
         </tr>
         <tr>
             <td colspan="3"><hr width="100%" /></td>
@@ -58,95 +70,70 @@
                 <tr>
                     <td valign="top">
                         <table border="0" cellpadding="0" style="border-collapse:collapse" cellspacing="0" width="100%">
-<!--                                                <tr  height="30">
-                                <td align="center" bgcolor="#CCCCCC"><strong>A. </strong></td>
-                                <td style="padding-left: 5px" bgcolor="#CCCCCC" colspan="5"><strong>PROGRAM PEMINATAN</strong></td>
-                            </tr>-->
-                            <!-- <tr height="20">
-                                 <td rowspan="7" width="5%"></td>
-                                <td align="center" width="5%"></td>
-                                <td width="27%">&nbsp;No. Antrian</td>
-                                <td align="center" width="2%">:</td>
-                                <td colspan="2">&nbsp;<strong><?= $c->poli . " (" . $c->no_antrian . ")" ?></strong></td>
+
+                            <tr >
+                                <td >&nbsp;R / <?= $c->terapy ?></td>
+                                <td colspan="2" align="right">&nbsp;Tanggal : <?php echo date('d F Y'); ?></td>
+                            </tr>
+                            <!-- <tr height="90">
+                                <td>&nbsp;Pasien : <?= $c->pasien ?></td>
                             </tr> -->
-                            <tr height="20">
-                                <td align="center"></td>
-                                <td>&nbsp;No.RM</td>
-                                <td align="center">:</td>
-                                <td colspan="2">&nbsp;<strong><?= $c->no_rm ?></strong></td>
-                            </tr>
-                            <tr height="20">
-                                <td align="center"></td>
-                                <td>&nbsp;Nama Pasien</td>
-                                <td align="center">:</td>
-                                <td colspan="2">&nbsp;<strong><?= $c->pasien ?></strong></td>
-                            </tr>
-                            <tr height="20">                                                                                                    
-                                <td align="center"></td>
-                                <td>&nbsp;Alamat</td>
-                                <td align="center">:</td>
-                                <td colspan="2">&nbsp;<strong><?= $c->alamat ?></strong></td>
-                            </tr>
-                            <!-- <tr height="20">
-                                <td align="center"></td>
-                                <td>&nbsp;Usia</td>
-                                <td align="center">:</td>
-                                <td colspan="2">&nbsp;<strong><?= $c->usia . " tahun" ?></strong></td>
+                              <!-- <tr height="90">
+                                <td>&nbsp;Terapy : <strong><?= $c->terapy ?></strong></td>
                             </tr> -->
+                            <tr height="300">
+                                <td valign="bottom">&nbsp;<strong>Pro : <?= $c->pasien ?> </strong></td>
+                            </tr>
+                            <tr>
+                                <td align="left"><hr width="95%" />
+                            </tr>
+                            <tr height="20">
+                                <td colspan="2">&nbsp;Umur : <strong><?= $c->usia . "Tahun" ?></strong></td>
+                            </tr>
+                            <tr>
+                                <strong><td align="center"><hr width="147%" /></td></strong>
+                            </tr>
+                            <tr>
+                                <td valign="bottom" color="#c90518">&nbsp;<strong>Obat tersebut tidak boleh diganti tanpa seijin dokter</strong></td>
+                            </tr>
+                            
+                           
                             <!-- <tr height="20">
-                                <td align="center"></td>
-                                <td>&nbsp;Kelamin</td>
-                                <td align="center">:</td>
-                                <td colspan="2">&nbsp;<strong><?= $c->kelamin ?></strong></td>
-                            </tr> -->
-                            <tr height="20">
-                                <td align="center"></td>
-                                <td>&nbsp;Status</td>
-                                <td align="center">:</td>
-                                <td colspan="2">&nbsp;<strong><?= $c->status ?></strong></td>
-                            </tr>
-                            <tr height="20">
-                                <td align="center"></td>
-                                <td>&nbsp;Terapy/Pengobatan</td>
-                                <td align="center">:</td>
-                                <td colspan="2">&nbsp;<strong><?= $c->terapy ?></strong></td>
-                            </tr>
-                            <tr height="20">
                                 <td align="center"></td>
                                 <td>&nbsp;Dokter</td>
                                 <td align="center">:</td>
                                 <td colspan="2">&nbsp;<strong><?= $c->nama_dokter ?></strong></td>
-                            </tr>
-                            <tr height="20">
+                            </tr> -->
+                            <!-- <tr height="20">
                                 <td align="center"></td>
                                 <td>&nbsp;Bidang Poli</td>
                                 <td align="center">:</td>
                                 <td colspan="2">&nbsp;<strong><?= $this->session->userdata('nama') ?></strong></td>
-                            </tr>
+                            </tr> -->
                         </table>
                     </td>
                 </tr>
 
-                <tr>
+                <!-- <tr>
                     <td>
                         <table border="0" cellpadding="5" cellspacing="5" width="100%">
                             <tr height="20">
                                 <td></td>
                                 <td></td>
                                 <td>Paiton, <?php echo date('d F Y'); ?></td>
-                            </tr>
-                            <tr>
+                            </tr> -->
+                            <!-- <tr>
                                 <td width="20%"></td>
                                 <td></td>
                                 <td width="35%">Petugas,</td>
-                            </tr>
-                            <tr height="55">
+                            </tr> -->
+                            <!-- <tr height="55">
                                 <td></td>
                                 <td valign="top" align='center' style="font-family: Monotype Corsiva; font-size: 25px; padding-top: 5px;"></td>
-                                <td valign="bottom"><strong>( <?= $this->session->userdata('nama') ?> )</strong></td>
-                            </tr>
-                            <tr><!-- 
-                                <td colspan="2" style="font-family: Monotype Corsiva; font-size: 14px;"><u>Catatan :</u> Simpan kuitansi bukti pembayaran ini dengan baik<br/> <b>- hijau untuk siswa &nbsp;&nbsp;&nbsp;- merah arsip madrasah</b></td>
+                                <td valign="bottom"><strong>( <?= $this->session->userdata('username') ?> )</strong></td>
+                            </tr> -->
+                            <!-- <tr><!--  -->
+                                <!-- <td colspan="2" style="font-family: Monotype Corsiva; font-size: 14px;"><u>Catatan :</u> Simpan kuitansi bukti pembayaran ini dengan baik<br/> <b>- hijau untuk siswa &nbsp;&nbsp;&nbsp;- merah arsip madrasah</b></td>
                             </tr> -->
                         </table>
                     </td>

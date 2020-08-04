@@ -40,9 +40,9 @@
                                 <div class="form-group">
                             <label for="status"><b>Status</b></label>
                             <?php $option = array(
-                                'Santri' => 'Santri',
-                                'BPJS' => 'BPJS',
-                                'Umum' => 'Umum'   
+                                'Santri' => ' Santri',
+                                'Umum' => ' Umum',
+                                'Bpjs' => 'Bpjs'  
                             );
                             echo form_dropdown('status',$option,'status',array('class'=>'form-control','pasien'=>'status', 'placeholder'=>'Isi status'))?>
                             <small class="text-danger"><?php echo form_error('status',' ')?></small>

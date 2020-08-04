@@ -2,7 +2,7 @@
 <div class="col-12 mt-5">
     <div class="card">
         <div class="card-body">            
-            <form action="<?= base_url() . 'c_kunjungan/cari' ?>" method="post">
+            <form action="<?= base_url() . 'C_kunjungan/cari' ?>" method="post">
                 <div class="form-row align-items-center">                    
                     <div class="search-box pull-left">
                         <!--<label for="example-date-input" class="col-form-label">Berdasarkan Tanggal</label>-->
@@ -43,6 +43,7 @@
                                     <th>Alamat</th>
                                     <th>Usia</th>
                                     <th>Kelamin</th>
+                                    <th>Status</th>
                                     <th>Tgl Daftar</th>
                                     <th>Kunjungan</th>                                    
                                     <th>Aksi</th>
@@ -59,12 +60,13 @@
                                     <td><?= $b->alamat ?></td>
                                     <td><?= $b->usia ?></td>
                                     <td><?= $b->kelamin ?></td>
+                                    <td><?= $b->status?></td>
                                     <td><?= $b->tgl_daftar." | ".$b->jam_daftar ?></td>
                                     <td><?= $b->poli ?></td>
                                     <td>
                                         <!--<a href="<?php //echo base_url() . 'c_pasien/detail/' . $b->id_pasien ?>" class="btn btn-rounded btn-primary mb-3"><i class="icon fa fa-clipboard"></i> Detail</a> |--> 
-                                        <a href="<?= base_url() . 'c_daftar/detail/' . $b->id_pendaftaran ?>" class="btn btn-rounded btn-success mb-3"><i class="icon fa fa-clipboard"></i> Detail</a> | 
-                                        <a href="<?= base_url() . 'c_daftar/cetak/' . $b->id_pendaftaran ?>" class="btn btn-rounded btn-warning mb-3" target="_blank"><i class="icon fa fa-print"></i> Cetak</a>
+                                        <a href="<?= base_url() . 'C_daftar/detail/' . $b->id_pendaftaran ?>" class="btn btn-rounded btn-success mb-3"><i class="icon fa fa-clipboard"></i> Detail</a> | 
+                                        <a href="<?= base_url() . 'C_daftar/cetak/' . $b->id_pendaftaran ?>" class="btn btn-rounded btn-warning mb-3" target="_blank"><i class="icon fa fa-print"></i> Cetak</a>
                                     </td>
                                 </tr>
                                 <?php

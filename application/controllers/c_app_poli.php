@@ -91,7 +91,7 @@ class C_app_poli extends CI_Controller {
     }
 
     public function cetak() {
-        $id_rm = $this->uri->segment(3);
+        $id_rm = $this->session->userdata('id_rm');
         $data['c'] = $this->M_rekammedis->detail2($id_rm);
         $this->load->view('app_poli/v_cetak_obat', $data);
     }
@@ -107,6 +107,10 @@ class C_app_poli extends CI_Controller {
     public function logout() {
         $this->session->sess_destroy();
         header('location:'.base_url().'C_app_poli');
+    }
+
+    public function grafik(){
+        
     }
 
 }

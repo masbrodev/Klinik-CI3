@@ -7,7 +7,7 @@
                     <div class="card">
                         <div class="card-body">
                             <!--<h4 class="header-title">Textual inputs</h4>-->                            
-                            <form action="<?=  base_url().'c_petugas/edit/'.$petugas->id_petugas?>" method="post">
+                            <form action="<?=  base_url().'C_petugas/edit/'.$petugas->id_petugas?>" method="post">
                                 <div class="form-group">
                                     <label for="example-text-input" class="col-form-label">Nama Lengkap</label>
                                     <input class="form-control" type="text" name="nama" value="<?= $petugas->nama?>" placeholder="Nama Lengkap" required="">
@@ -30,7 +30,7 @@
                                     <input type="password" class="form-control" name="password" value="<?= $petugas->password?>" placeholder="Password" required="">
                                 </div>    
                                 <input type="submit" name="bt_simpan" class="btn btn-rounded btn-success mb-3" value="Simpan">
-                                <a href="<?=  base_url().'c_petugas'?>" class="btn btn-rounded btn-warning mb-3">Kembali</a>
+                                <a href="<?=  base_url().'C_petugas'?>" class="btn btn-rounded btn-warning mb-3">Kembali</a>
                             </form>
                         </div>
                     </div>

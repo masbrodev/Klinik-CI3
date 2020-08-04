@@ -2,7 +2,7 @@
     <div class="row">
 
         <!-- Primary table start -->
-        <div class="col-16 mt-5">
+        <div class="col-12 mt-5">
             <div class="card">
                 <div class="card-body">                                        
                     <!--<h4 class="header-title">Data Pasien</h4>-->                    

@@ -21,7 +21,7 @@
                     }
                     ?>                    
                     <!--<h4 class="header-title">Data Pasien</h4>-->                    
-                    <a class="btn btn-rounded btn-primary mb-3" href="<?= base_url() . 'c_petugas/tambah' ?>" role="button"><i class="icon fa fa-plus"></i> Tambah</a>
+                    <a class="btn btn-rounded btn-primary mb-3" href="<?= base_url() . 'C_petugas/tambah' ?>" role="button"><i class="icon fa fa-plus"></i> Tambah</a>
                     <div class="data-tables datatable-primary">
                         <table id="dataTable2" class="text-center">
                             <thead class="text-capitalize">
@@ -47,8 +47,8 @@
                                         <td><?= $b->username ?></td>
                                         <td>
                                             <!--<a href="<?php //echo base_url() . 'c_petugas/detail/' . $b->id_petugas  ?>" class="btn btn-rounded btn-primary mb-3"><i class="icon fa fa-clipboard"></i> Detail</a> |--> 
-                                            <a href="<?= base_url() . 'c_petugas/edit/' . $b->id_petugas ?>" class="btn btn-rounded btn-success mb-3"><i class="icon fa fa-pencil"></i> Edit</a> | 
-                                            <a href="<?= base_url() . 'c_petugas/hapus/' . $b->id_petugas ?>" class="btn btn-rounded btn-danger mb-3" onclick="return confirm('Apakah anda yakin menghapus data \n <?= $b->nama ?>..?')"><i class="icon fa fa-trash"></i> Hapus</a>
+                                            <a href="<?= base_url() . 'C_petugas/edit/' . $b->id_petugas ?>" class="btn btn-rounded btn-success mb-3"><i class="icon fa fa-pencil"></i> Edit</a> | 
+                                            <a href="<?= base_url() . 'C_petugas/hapus/' . $b->id_petugas ?>" class="btn btn-rounded btn-danger mb-3" onclick="return confirm('Apakah anda yakin menghapus data \n <?= $b->nama ?>..?')"><i class="icon fa fa-trash"></i> Hapus</a>
                                         </td>
                                     </tr>
                                     <?php

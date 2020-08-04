@@ -41,8 +41,9 @@
                                 <div class="form-group">
                             <label for="status"><b>Status</b></label>
                             <?php $option = array(
-                                'Mukim' => ' Mukim',
-                                'Non_Mukim' => 'Non_Mukim'
+                                'Santri' => ' Santri',
+                                'Umum' => ' Umum',
+                                'Bpjs' => 'Bpjs'
                                 
                             );
                             echo form_dropdown('status',$option,'status',array('class'=>'form-control','pasien'=>'status', 'placeholder'=>'Isi status'))?>

@@ -39,7 +39,48 @@
                 </div>
                                                 
             </div>
-        </div>      
+        </div>    
+        
+        <div class="main-content-inner">
+
+<div class="row">
+<html>
+  <head>
+  <?php
+  $data = $this->M_rekammedis->grafik('tb_pendaftaran')->num_rows();
+//   $data1 = $this->M_rekammedis->grafik('detail_pinjam')->num_rows();
+//   $data2 = $this->M_rekammedis->grafik('barang')->num_rows();
+  
+  
+  ?>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Kunjungan',     <?=$data?>],
+        //   ['Pengembalian',      <?=$data1?>],
+        //   ['Stok Rusak',      <?=$data2?>],
+        ]);
+
+        var options = {
+          title: 'Kunjungan Pasien'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="piechart" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>
         <!--testimonial area end--> 
     </div>
 </div>

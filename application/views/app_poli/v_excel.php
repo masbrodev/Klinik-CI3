@@ -93,7 +93,18 @@
                                 <?php
                                 $no++;
                             }
-                            ?>                                                              
+                            ?> 
+                           
+                            <table valign="top" align='center' colspan="0" height="20">
+                                <font size="3" style="font-family: Times New Rowman">Paiton, <?php echo date('d F Y'); ?></font><br/>
+                                <font size="3" style="font-family: Times New Rowman">Petugas,</font><br/>
+                                
+                                <td valign="top" style="font-family: Times New Rowman; font-size: 25px"></td>
+                                <td height="100"><strong>( <?= $b->nama_dokter ?> )</strong></td>
+                            </table>
+                            
+                            </table>  
+                            </tr>                                                        
                         </tbody>
                     </table>
                 </td>
