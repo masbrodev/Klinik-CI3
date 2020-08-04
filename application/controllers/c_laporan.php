@@ -1,10 +1,10 @@
 <?php
 
-class c_laporan extends CI_Controller {
+class C_laporan extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
-        $this->load->model('m_laporan');
+        $this->load->model('M_laporan');
         $this->load->helper('url');
         
         if ($this->session->userdata('status') != 'login') {
@@ -22,7 +22,7 @@ class c_laporan extends CI_Controller {
     public function cari() {
         $data['judul1'] = 'Laporan';
         $data['judul2'] = 'Kunjungan Pasien';
-        $data['kunjungan'] = $this->m_laporan->cari();
+        $data['kunjungan'] = $this->M_laporan->cari();
         $data['contents'] = 'laporan/v_laporan';
         $this->load->view('v_template', $data);
         
@@ -31,7 +31,7 @@ class c_laporan extends CI_Controller {
     public function cetak() {
         $tgl_dari = $this->uri->segment(3);
         $tgl_sampai = $this->uri->segment(4);
-        $data['kunjungan'] = $this->m_laporan->cetak($tgl_dari, $tgl_sampai);
+        $data['kunjungan'] = $this->M_laporan->cetak($tgl_dari, $tgl_sampai);
         $data['tgl_dari'] = $tgl_dari;
         $data['tgl_sampai'] = $tgl_sampai;
         $this->load->view('laporan/v_cetak', $data);
@@ -42,22 +42,22 @@ class c_laporan extends CI_Controller {
         header("content-disposition:attachment;filename=kunjungan.xls");
         $tgl_dari = $this->uri->segment(3);
         $tgl_sampai = $this->uri->segment(4);
-        $data['kunjungan'] = $this->m_laporan->cetak($tgl_dari, $tgl_sampai);
+        $data['kunjungan'] = $this->M_laporan->cetak($tgl_dari, $tgl_sampai);
         $data['tgl_dari'] = $tgl_dari;
         $data['tgl_sampai'] = $tgl_sampai;
         $this->load->view('laporan/v_excel', $data);
     }
     
     public function detail($id) {
-        $data['pasien'] = $this->m_pasien->detail2($id);
+        $data['pasien'] = $this->M_pasien->detail2($id);
         $data['contents'] = 'pasien/v_detail';
         $this->load->view('v_template', $data);
     }
 
     public function tambah() {
         if ($this->input->post('bt_simpan')) {
-            $this->m_pasien->tambah();
-            redirect('c_pasien');
+            $this->M_pasien->tambah();
+            redirect('C_pasien');
         } else {
             $data['judul1'] = 'Pasien';
             $data['judul2'] = 'Tambah Data';
@@ -69,12 +69,12 @@ class c_laporan extends CI_Controller {
 
     public function edit($id) {
         if ($this->input->post('bt_simpan')) {
-            $this->m_pasien->edit($id);
+            $this->M_pasien->edit($id);
             $data['contents'] = 'pasien/v_edit';
             $this->load->view('v_template', $data);
-            redirect('c_pasien');
+            redirect('C_pasien');
         } else {
-            $data['pasien'] = $this->m_pasien->detail($id);
+            $data['pasien'] = $this->M_pasien->detail($id);
             $data['judul1'] = 'Pasien';
             $data['judul2'] = 'Edit Data';
             $data['contents'] = 'pasien/v_edit';
@@ -83,9 +83,9 @@ class c_laporan extends CI_Controller {
     }
 
     public function hapus($id) {
-        $this->m_pasien->hapus($id);
+        $this->M_pasien->hapus($id);
         $this->session->set_flashdata('k', 'hapus_berhasil');
-        redirect('c_pasien');
+        redirect('C_pasien');
     }
 
 }

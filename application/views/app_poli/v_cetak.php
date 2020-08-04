@@ -36,7 +36,7 @@
                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                         <tr>
                             <td width="15%" align="center">
-                                <img src="<?php echo base_url() ?>assets/images/logohtm.png"/>
+                                <img src="<?php echo base_url() ?>assets/images/logoklnk.png"/>
                             </td>
                             <td valign="top" align='left'>
                                 <font size="3" style="font-family: Georgia"><strong>LAPORAN REKAM MEDIS KLINIK AZ-ZAINIYAH</strong></font><br/>
@@ -89,16 +89,35 @@
                                     <td><?= $b->terapy ?></td>
                                     <td><?= $b->poli ?></td>
                                     <td><?= $b->nama_dokter ?></td>
-                                    <td><?= $b->perawat ?></td>
+                                    <td><?= $b->perawat ?></td>    
                                 </tr>
-                                <?php
-                                $no++;
-                            }
-                            ?>                                                              
+                                        <?php
+                                        $no++;
+                                    }
+                                    ?>
+                            <table border="0" cellpadding="5" cellspacing="5" width="130%">
+                            <tr height="20">
+                                <td></td>
+                                <td></td>
+                                <td>Paiton, <?php echo date('d F Y'); ?></td>
+                            </tr>
+                            <tr>
+                                <td width="20%"></td>
+                                <td></td>
+                                <td width="35%">Petugas,</td>
+                            </tr>
+                            <tr height="55">
+                                <td></td>
+                                <td valign="top" align='center' style="font-family: Monotype Corsiva; font-size: 25px; padding-top: 5px;"></td>
+                                <td valign="bottom"><strong>( <?= $b->nama_dokter ?> )</strong></td>
+                            </tr>
+                            </table>
+                            
                         </tbody>
                     </table>
+                    
                 </td>
-            </tr>
+            </tr>       
         </table>
 
 

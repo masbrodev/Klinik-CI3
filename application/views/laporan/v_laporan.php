@@ -2,7 +2,7 @@
 <div class="col-12 mt-5">
     <div class="card">
         <div class="card-body">            
-            <form action="<?= base_url() . 'c_laporan/cari' ?>" method="post">
+            <form action="<?= base_url() . 'C_laporan/cari' ?>" method="post">
                 <div class="form-row align-items-center">                    
                     <div class="search-box pull-left">
                         <label for="example-date-input" class="col-form-label">Dari Tanggal</label>
@@ -41,13 +41,14 @@
                     }
                     ?>                    
                     <!--<h4 class="header-title">Data Pasien</h4>-->
-                    <a class="btn btn-rounded btn-success mb-3" href="<?= base_url().'c_laporan/cetak/'.$tgl_dari.'/'.$tgl_sampai?>" role="button" target="_blank"><i class="icon fa fa-print"></i> Cetak</a>
-                    <a class="btn btn-rounded btn-warning mb-3" href="<?= base_url().'c_laporan/excel/'.$tgl_dari.'/'.$tgl_sampai?>" role="button"><i class="icon fa fa-print"></i> Cetak Excel</a>
+                    <a class="btn btn-rounded btn-success mb-3" href="<?= base_url().'C_laporan/cetak/'.$tgl_dari.'/'.$tgl_sampai?>" role="button" target="_blank"><i class="icon fa fa-print"></i> Cetak</a>
+                    <a class="btn btn-rounded btn-warning mb-3" href="<?= base_url().'C_laporan/excel/'.$tgl_dari.'/'.$tgl_sampai?>" role="button"><i class="icon fa fa-print"></i> Cetak Excel</a>
                     <div class="data-tables datatable-primary">
                         <table id="dataTable2" class="text-center">
                             <thead class="text-capitalize">
                                 <tr>
                                     <th>No</th>
+                                    <th>Nis\Nik</th>
                                     <th>Nama</th>
                                     <th>Alamat</th>
                                     <th>Usia</th>
@@ -65,6 +66,7 @@
                                 ?>
                                 <tr>
                                     <td><?= $no ?></td>
+                                    <td><?= $b->nis_nik ?></td>
                                     <td><?= $b->pasien ?></td>
                                     <td><?= $b->alamat ?></td>
                                     <td><?= $b->usia ?></td>

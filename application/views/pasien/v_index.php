@@ -57,7 +57,7 @@
                                         <td><?= $b->pendidikan ?></td>
                                         <td>
                                             <!--<a href="<?php //echo base_url() . 'c_pasien/detail/' . $b->id_pasien  ?>" class="btn btn-rounded btn-primary mb-3"><i class="icon fa fa-clipboard"></i> Detail</a> |--> 
-                                            <a href="<?= base_url() . 'C_pasien/edit/' . $b->id_pasien ?>" class="btn btn-rounded btn-success mb-3"><i class="icon fa fa-pencil"></i> Edit</a> | 
+                                            <a href="<?= base_url() . 'C_pasien/edit/' . $b->id_pasien ?>" class="btn btn-rounded btn-success mb-3" onclick="return confirm('Apakah anda yakin mengedit data \n <?= $b->nama ?>..?')"><i class="icon fa fa-pencil"></i> Edit</a>
                                             <a href="<?= base_url() . 'C_pasien/hapus/' . $b->id_pasien ?>" class="btn btn-rounded btn-danger mb-3" onclick="return confirm('Apakah anda yakin menghapus data \n <?= $b->nama ?>..?')"><i class="icon fa fa-trash"></i> Hapus</a>
                                         </td>
                                     </tr>

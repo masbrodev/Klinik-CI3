@@ -35,8 +35,9 @@
                     <!--===getHeader()=======================================================-->
                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                         <tr>
-                            <td width="15%" align="center">
-                                <!--<img src="<?php // echo base_url() ?>assets/images/logo_unuja.jpg"/>-->
+                            <td width="50%" align="center">
+                                <!-- <img src="<?php echo base_url()?>assets/images/logok.jpg"/> -->
+                                <a href="index.html"><img src="<?php echo base_url() ?>assets/images/logok.jpg" alt="logo"></a>
                             </td>
                             <td valign="top" align='left' colspan="0">
                                 <font size="3" style="font-family: Georgia"><strong>KUNJUNGAN PASIEN KLINIK AZ-ZAINIYAH</strong></font><br/>
@@ -56,6 +57,7 @@
                         <thead class="text-capitalize">
                             <tr height="30" align="center">
                                 <th bgcolor="#CCCCCC" width="5%">No</th>
+                                <th bgcolor="#CCCCCC" width="15%">Nis\Nik</th>
                                 <th bgcolor="#CCCCCC" width="15%">Nama</th>
                                 <th bgcolor="#CCCCCC">Alamat</th>
                                 <th bgcolor="#CCCCCC">Usia</th>
@@ -73,6 +75,7 @@
                                 ?>
                                 <tr height="22" align="center">
                                     <td><?= $no ?></td>
+                                    <td>&nbsp;<?= $b->nis_nik ?>&nbsp;</td>
                                     <td>&nbsp;<?= $b->pasien ?>&nbsp;</td>
                                     <td>&nbsp;<?= $b->alamat ?>&nbsp;</td>
                                     <td><?= $b->usia ?></td>

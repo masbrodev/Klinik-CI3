@@ -139,8 +139,8 @@
 }
 
 .sidebar-header {
-    padding: 19px 32px 20px;
-    background: #ececf1;
+    padding: 18px 30px 10px;
+    background: #f8f9fa;
     border-bottom: 1px solid #343e50;
 }
 .sidebar-menu .logo{
@@ -713,8 +713,8 @@ ul.breadcrumbs {
             align-items: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    background: -webkit-linear-gradient(left, #8914fe 0%, #8063f5 100%);
-    background: linear-gradient(to right, #8914fe 0%, #8063f5 100%);
+    background: -webkit-linear-gradient(left,#9946f8 0%, #9946f8 100%);
+    background: linear-gradient(to right,#9946f8 0%, #9946f8 100%);
     padding: 17px 38px;
     position: relative;
 }
@@ -2274,7 +2274,7 @@ table.dataTable thead td {
     display: inline-block;
     font-size: 15px;
     color: #fff;
-    background: #1e1099;
+    background: #815ef6;
     padding: 12px 19px;
     border-radius: 3px;
     text-transform: capitalize;
@@ -2285,7 +2285,7 @@ table.dataTable thead td {
 }
 
 .invoice-buttons a:hover {
-    background: #3e1daa;
+    background: #574494;
 }
 
 /*-------------------- END Invoice ------------------- */
@@ -2294,7 +2294,7 @@ table.dataTable thead td {
 /*-------------------- 23. Login ------------------- */
 
 .login-area {
-    background: #afaee7;
+    background: #F3F8FB;
 }
 
 .login-box {
@@ -2314,25 +2314,23 @@ table.dataTable thead td {
 
 .login-form-head {
     text-align: center;
-    background: #ffffff;
-    padding: 50px;
+    background: #e9ecef;
+    padding: 0px;
 }
 
 .login-form-head h4 {
-    letter-spacing: 0;
+    letter-spacing: 3;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 800;
     margin-bottom: 7px;
-    color: rgb(0, 0, 0);
+    color: #303641;
 }
 
 .login-form-head p {
-    color: #dc3545;
-    font-size: 14px;
-    line-height: 22px;
-    /* text-shadow: 0 0 black; */
+    color: #130e0e;
+    font-size: 17px;
+    line-height: 24px;
 }
-
 
 .login-form-body {
     padding: 50px;
@@ -2413,8 +2411,8 @@ table.dataTable thead td {
 }
 
 .submit-btn-area button:hover {
-    background: #2c71da;
-    color: #ffffff;
+    background: #275eaf;
+    color: #e0dfe6;
 }
 
 .submit-btn-area button i {

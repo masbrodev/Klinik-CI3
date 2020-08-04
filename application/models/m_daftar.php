@@ -23,11 +23,11 @@ class M_daftar extends CI_Model {
     }
     
     public function detail2($id) {
-        return $this->db->query("SELECT a.id_pendaftaran, a.tgl_daftar, a.jaM_daftar, a.keluhan, a.no_antrian, "
-                . "b.nama AS pasien, b.alamat, b.usia, b.kelamin, b.daerah, c.nama AS poli FROM "
+        return $this->db->query("SELECT a.id_pendaftaran, a.tgl_daftar, a.jam_daftar, a.keluhan, a.no_antrian, "
+                . "b.nama AS pasien,b.nis_nik, b.alamat, b.usia, b.kelamin, b.status, b.daerah, c.nama AS poli FROM "
                 . "tb_pendaftaran a, tb_pasien b, tb_poli c WHERE a.id_pasien=b.id_pasien AND "
                 . "a.id_poli=c.id_poli AND a.id_pendaftaran='$id'")
-                ->row();
+                        ->row();
     }
     
     public function get_no_antri($id_poli, $tgl_skg) {
@@ -43,7 +43,7 @@ class M_daftar extends CI_Model {
     }
     
     public function tambah($data) {
-//        $jaM_skg = date("H:i:s");	
+//        $jam_skg = date("H:i:s");	
 //	$tgl_skg = date("Y-m-d");
 //        $id_pasien = $this->input->post('id_pasien');
 //        $id_poli = $this->input->post('id_poli');        
@@ -54,7 +54,7 @@ class M_daftar extends CI_Model {
 //        $data = array(
 //            'id_pendaftaran' => $id_max,
 //            'tgl_daftar' => $tgl_skg,
-//            'jaM_daftar' => $jaM_skg,
+//            'jam_daftar' => $jam_skg,
 //            'id_pasien'  => $id_pasien,
 //            'keluhan'    => $this->input->post('keluhan'),
 //            'no_antrian' => $no_antrian,

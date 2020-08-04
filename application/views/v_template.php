@@ -4,9 +4,9 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Az-Zainiyah</title>
+        <title>Klinik Az-Zainiyah</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" type="image/png" href="<?php echo base_url() ?>assets/images/icon/favicon.ico">
+        <link rel="shortcut icon" type="image/png" href="<?php echo base_url() ?>assets/images/icon/logom.png">
         <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/font-awesome.min.css">
         <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/themify-icons.css">
@@ -45,30 +45,30 @@
             <!-- sidebar menu area start -->
             <div class="sidebar-menu">
                 <div class="sidebar-header">
-                    <div class="logo">
-                        <a href="index.html"><img src="<?php echo base_url() ?>assets/images/icon/logo_app2.png" alt="logo"></a>
+                <div class="logo">
+                        <a href="index.html"><img src="<?php echo base_url() ?>assets\images\icon\logom.png" alt="logo"></a>
                     </div>
                 </div>
                 <div class="main-menu">
                     <div class="menu-inner">
                         <nav>
-                            <ul class="metismenu" id="menu">
-                                <li><a href="<?php echo base_url(); ?>"><i class="ti-dashboard"></i> <span>Beranda</span></a></li>
+                        <ul class="metismenu" id="menu">
+                                <li><a href="<?php echo base_url(); ?>"><i class="fa fa-medkit"></i> <span>Beranda</span></a></li>
                                 
                                 <li>
-                                    <a href="javascript:void(0)" aria-expanded="true"><i class="ti-dashboard"></i><span>Data</span></a>
+                                    <a href="javascript:void(0)" aria-expanded="true"><i class="ti-archive"></i><span>Data</span></a>
                                     <ul class="collapse">
-                                        <li><a href="<?php echo base_url() . 'c_pasien'; ?>"><i class="ti-dashboard"></i> <span>Data Pasien</span></a></li>
-                                        <li><a href="<?php echo base_url() . 'c_petugas'; ?>"><i class="ti-dashboard"></i> <span>Data Petugas</span></a></li>
-                                        <li><a href="<?php echo base_url() . 'c_poli'; ?>"><i class="ti-dashboard"></i> <span>Data Poli</span></a></li>
+                                        <li><a href="<?php echo base_url() . 'C_pasien'; ?>"><i class="ti-map"></i> <span>Data Pasien</span></a></li>
+                                        <li><a href="<?php echo base_url() . 'C_petugas'; ?>"><i class="ti-map"></i> <span>Data Petugas</span></a></li>
+                                        <li><a href="<?php echo base_url() . 'C_poli'; ?>"><i class="ti-map"></i> <span>Data Poli</span></a></li>
                                     </ul>
                                 </li>
                                                                 
-                                <li><a href="<?php echo base_url() . 'c_daftar'; ?>"><i class="ti-dashboard"></i> <span>Pendaftaran</span></a></li>
-                                <li><a href="<?php echo base_url() . 'c_kunjungan'; ?>"><i class="ti-dashboard"></i> <span>Kunjungan Pasien</span></a></li>
-                                <li><a href="<?php echo base_url() . 'c_laporan'; ?>"><i class="ti-dashboard"></i> <span>Laporan</span></a></li>
-                                <!--<li><a href="<?php // echo base_url() . 'c_daftar'; ?>"><i class="ti-dashboard"></i> <span>Ubah Password</span></a></li>-->
-                                <li><a href="<?php echo base_url() . 'c_dashboard/logout'; ?>"><i class="ti-dashboard"></i> <span>Log Out</span></a></li>
+                                <li><a href="<?php echo base_url() . 'C_daftar'; ?>"><i class="fa fa-male"></i> <span>Pendaftaran</span></a></li>
+                                <li><a href="<?php echo base_url() . 'C_kunjungan'; ?>"><i class="fa fa-calendar-check-o"></i> <span>Kunjungan Pasien</span></a></li>
+                                <li><a href="<?php echo base_url() . 'C_laporan'; ?>"><i class="fa fa-book"></i> <span>Laporan</span></a></li>
+                               
+                                <li><a href="<?php echo base_url() . 'C_dashboard/logout'; ?>"><i class="ti-dashboard"></i> <span>Log Out</span></a></li>
                             </ul>
                         </nav>
                     </div>
@@ -81,26 +81,27 @@
                 <div class="header-area">
                     <div class="row align-items-center">
                         <!-- nav and search button -->
-                        <div class="col-md-6 col-sm-8 clearfix">
+                        <!-- <div class="col-md-8 col-sm-8 clearfix"> -->
                             <div class="nav-btn pull-left">
+                           
+                                <span></span> 
                                 <span></span>
                                 <span></span>
-                                <span></span>
-                            </div>
-                            <div class="search-box pull-left">
-                                <form action="<?=  base_url().'c_daftar/cari'?>" method="post">
+                                </div>
+                            <!-- <div class="search-box pull-left">
+                                <form action="" method="post">
                                     <input type="text" name="ed_cari" placeholder="Search..." required="">
                                     <i class="ti-search"></i>
                                 </form>
-                            </div>
-                        </div>
-                        <!-- profile info & task notification -->
-                        <div class="col-md-6 col-sm-4 clearfix">
+                            </div> -->
+                        <!-- </div> -->
+                
+                        <!-- <div class="col-md-20 col-sm-4 clearfix">
                             <ul class="notification-area pull-right">
                                 <li id="full-view"><i class="ti-fullscreen"></i></li>
                                 <li id="full-view-exit"><i class="ti-zoom-out"></i></li>
                             </ul>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 
@@ -121,7 +122,7 @@
                                 <h4 class="user-name dropdown-toggle" data-toggle="dropdown"><?= $this->session->userdata('nama') ?> <i class="fa fa-angle-down"></i></h4>
                                 <div class="dropdown-menu">
                                     <!--<a class="dropdown-item" href="#">Pengaturan</a>-->
-                                    <a class="dropdown-item" href="<?= base_url() . 'c_dashboard/logout' ?>">Log Out</a>
+                                    <a class="dropdown-item" href="<?= base_url() . 'C_dashboard/logout' ?>">Log Out</a>
                                 </div>
                             </div>
                         </div>
@@ -137,7 +138,7 @@
             <!-- footer area start-->
             <footer>
                 <div class="footer-area">
-                    <p>© Copyright 2018. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
+                    <p>Klinik Az-zainiyah Pondok Pesantren Nurul jadid</p>
                 </div>
             </footer>
             <!-- footer area end-->

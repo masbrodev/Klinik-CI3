@@ -40,14 +40,19 @@
                                         <td><?= $pasien->kelamin ?></td>
                                     </tr>
                                     <tr class="table-secondary">
-                                        <th scope="row">Gol. Darah</th>
+                                        <th scope="row">Status</th>
                                         <td>:</td>
-                                        <td><?= $pasien->gol_darah ?></td>                                        
+                                        <td><?= $pasien->status ?></td>                                        
                                     </tr>
                                     <tr class="table-success">
                                         <th scope="row">Daerah</th>
                                         <td>:</td>
                                         <td><?= $pasien->daerah ?></td>
+                                    </tr>
+                                    <tr class="table-success">
+                                        <th scope="row">Wilayah</th>
+                                        <td>:</td>
+                                        <td><?= $pasien->wilayah ?></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -61,7 +66,7 @@
             <div class="card">
                 <div class="card-body">
                     <!--<h4 class="header-title">Textual inputs</h4>-->                            
-                    <form action="<?= base_url() . 'c_daftar/simpan_pendaftaran' ?>" method="post">
+                    <form action="<?= base_url() . 'C_daftar/simpan_pendaftaran' ?>" method="post">
                         <div class="form-group">
                             <label for="example-text-input" class="col-form-label">Keluhan</label>
                             <input class="form-control" type="text" name="keluhan" placeholder="Keluhan" required="">
@@ -80,7 +85,7 @@
                             </select>
                         </div>                            
                         <input type="submit" name="bt_simpan" class="btn btn-rounded btn-primary mb-3" value="Simpan">
-                        <a href="<?= base_url() . 'c_daftar' ?>" class="btn btn-rounded btn-danger mb-3">Batal</a>
+                        <a href="<?= base_url() . 'C_daftar' ?>" class="btn btn-rounded btn-danger mb-3">Batal</a>
                     </form>
                 </div>
             </div>

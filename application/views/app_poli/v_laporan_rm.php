@@ -1,3 +1,5 @@
+<div class="main-content-inner">
+    <div class="row">
 <!-- basic form start -->
 <div class="col-12 mt-5">
     <div class="card">
@@ -42,7 +44,7 @@
     <div class="row">
 
         <!-- Primary table start -->
-        <div class="col-14 mt-5">
+        <div class="col-14 mt-2">
             <div class="card">
                 <div class="card-body">
                     <?php
@@ -62,12 +64,13 @@
                                 <tr>
                                 <th scope="col">NO</th>
                                 <th scope="col">NO_RM</th>
-                                <th scope="col">Tgl_daftar</th>
+                                <!-- <th scope="col">Tgl_daftar</th> -->
+                                <th scope="col">Status</th>
                                 <th scope="col">Nama</th>
                                 <th scope="col">Keluhan</th>
                                 <th scope="col">Diagnosa</th>
                                 <th scope="col">Tindakan</th>
-                                <th scope="col">Terapi/Pengobatan</th>
+                                <th scope="col">Terapi</th>
                                 <th scope="col">Dokter</th>
                                 <th scope="col">Perawat</th>
                                 <th scope="col">Poli</th>
@@ -81,7 +84,8 @@
                                 <tr>
                                 <th scope="row"><?=$no?></th>
                                 <td><?=$b->no_rm?></td>
-                                <td><?=$b->tgl_daftar?></td>
+                                <!-- <td><?=$b->tgl_daftar?></td> -->
+                                <td><?=$b->status?></td>
                                 <td><?=$b->pasien?></td>
                                 <td><?=$b->keluhan?></td>
                                 <td><?=$b->diagnosa?></td>
@@ -115,3 +119,5 @@
 <?php
 }
 ?>
+ <!-- </div>
+</div> -->
