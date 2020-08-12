@@ -2,8 +2,8 @@
     <div class="row"> -->
 
         <!-- Primary table start -->
-<div class="col-12 mt-5">
-<div class="card">
+<!-- <div class="col-12 mt-5">
+<div class="card"> -->
     <div class="card-body">
         <?php
         $notif = $this->session->flashdata('k');

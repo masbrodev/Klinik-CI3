@@ -9,8 +9,8 @@
                             <!--<h4 class="header-title">Textual inputs</h4>-->                            
                             <form action="<?=  base_url().'C_pasien/tambah'?>" method="post">
                             <div class="form-group">
-                                    <label for="example-text-input" class="col-form-label">Nik\Nis</label>
-                                    <input class="form-control" type="text" name="nis_nik" placeholder="Nik\Nis" required="">
+                                    <label for="example-text-input" class="col-form-label">No_Rm</label>
+                                    <input class="form-control" type="text" name="no_rm" placeholder="No_Rm" required="">
                                 </div>
                                 <div class="form-group">
                                     <label for="example-text-input" class="col-form-label">Nama Lengkap</label>
@@ -20,6 +20,10 @@
                                     <label for="example-search-input" class="col-form-label">Alamat</label>
                                     <input class="form-control" type="text" name="alamat" placeholder="Alamat" required="">
                                 </div>
+                                <div class="form-group">
+                                     <label for="tgl_lahir">Tanggal Lahir</label>
+                                     <input class="form-control" type="date" id="pasien" name="tgl_lahir">
+                                  </div>
                                 <div class="form-group">
                                     <label for="example-email-input" class="col-form-label">Usia</label>
                                     <input class="form-control" type="text" name="usia" placeholder="Usia" required="">
@@ -38,7 +42,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                            <label for="status"><b>Status</b></label>
+                            <label for="status">Status</label>
                             <?php $option = array(
                                 'Santri' => ' Santri',
                                 'Umum' => ' Umum',
@@ -60,7 +64,7 @@
                                     <input type="text" class="form-control" name="wilayah" placeholder="Wilayah" required="">
                                 </div>
                                 <div class="form-group">
-                            <label for="pendidikan"><b>Pendidikan</b></label>
+                            <label for="pendidikan">Pendidikan</label>
                             <?php $option = array(
                                 'MI' => ' MI',
                                 'SMPNJ' => 'SMPNJ',

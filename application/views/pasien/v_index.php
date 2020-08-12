@@ -27,9 +27,10 @@
                             <thead class="text-capitalize">
                                 <tr>
                                     <th>No</th>
-                                    <th>Nik\Nis</th>
+                                    <th>No_Rm</th>
                                     <th>Nama</th>
                                     <th>Alamat</th>
+                                    <th>Tgl_Lahir</th>
                                     <th>Usia</th>
                                     <th>Kelamin</th>
                                     <th>Status</th>
@@ -46,9 +47,12 @@
                                     ?>
                                     <tr>
                                         <td><?= $no ?></td>
-                                        <td><?= $b->nis_nik ?></td>
+                                        <td><?= $b->no_rm ?></td>
                                         <td><?= $b->nama ?></td>
                                         <td><?= $b->alamat ?></td>
+                                        <td><?php $date = date_create($b->tgl_lahir);
+                                        echo date_format($date, 'd-m-Y');
+                                        ?></td>
                                         <td><?= $b->usia ?></td>
                                         <td><?= $b->kelamin ?></td>
                                         <td><?= $b->status ?></td>

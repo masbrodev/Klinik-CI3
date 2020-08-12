@@ -15,6 +15,11 @@
                                         <td><h3><?= $pasien->no_antrian?></h3></td>
                                     </tr>
                                     <tr class="table-default">
+                                        <th scope="row">No_rm</th>
+                                        <td><b>:</b></td>
+                                        <td><?= $pasien->no_rm ?></td>                                      
+                                    </tr>
+                                    <tr class="table-default">
                                         <th scope="row">Nama Pasien</th>
                                         <td><b>:</b></td>
                                         <td><?= $pasien->pasien ?></td>
@@ -25,11 +30,10 @@
                                         <td><?= $pasien->alamat ?></td>                                      
                                     </tr>
                                     <tr class="table-default">
-                                        <th scope="row">Usia</th>
+                                        <th scope="row">Tgl_Lahir</th>
                                         <td><b>:</b></td>
-                                        <td><?= $pasien->usia ?></td>
+                                        <td><?= $pasien->tgl_lahir ?></td>
                                     </tr>
-
                                     <tr class="table-default">
                                         <th scope="row">Kelamin</th>
                                         <td><b>:</b></td>
@@ -38,7 +42,7 @@
                                     <tr class="table-default">
                                         <th scope="row">Keluhan</th>
                                         <td><b>:</b></td>
-                                        <td><?= $pasien->keluhan ?></td>                                      
+                                        <td><?= $pasien->keluhan ?></td>
                                     </tr>
                                     <tr class="table-default">
                                         <th scope="row">Kunjungan</th>
@@ -63,16 +67,11 @@
                 <div class="card-body">
                     <!--<h4 class="header-title">Textual inputs</h4>-->                            
                     <form action="<?= base_url() . 'C_app_poli/simpan_rm' ?>" method="post">
-                    <div class="form-group">
-                            <label for="example-text-area" class="col-form-label">NO.RM</label>
-                            <input class="form-control" type="text" name="no_rm" placeholder="No.RM" required="">
-                            <input name="id_pasien" value="<?=$pasien->id_pasien?>" type="hidden">
-                            <input name="id_pendaftaran" value="<?=$pasien->id_pendaftaran?>" type="hidden">
-                           
-                        </div>
                         <div class="form-group">
                             <label for="example-text-area" class="col-form-label">Diagnosa</label>
                             <input class="form-control" type="text" name="diagnosa" placeholder="Diagnosa" required="">
+                            <input name="id_pasien" value="<?=$pasien->id_pasien?>" type="hidden">
+                            <input name="id_pendaftaran" value="<?=$pasien->id_pendaftaran?>" type="hidden">
                         </div>
                         <div class="form-group">
                             <label for="example-text-input" class="col-form-label">Tindakan</label>

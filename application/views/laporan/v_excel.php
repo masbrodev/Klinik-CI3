@@ -57,13 +57,15 @@
                         <thead class="text-capitalize">
                             <tr height="30" align="center">
                                 <th bgcolor="#CCCCCC" width="5%">No</th>
-                                <th bgcolor="#CCCCCC" width="15%">Nis\Nik</th>
+                                <th bgcolor="#CCCCCC" width="15%">No_RM</th>
                                 <th bgcolor="#CCCCCC" width="15%">Nama</th>
                                 <th bgcolor="#CCCCCC">Alamat</th>
+                                <th bgcolor="#CCCCCC">Tgl_Lahir</th>
                                 <th bgcolor="#CCCCCC">Usia</th>
                                 <th bgcolor="#CCCCCC">Kelamin</th>
                                 <th bgcolor="#CCCCCC">Daerah</th>
                                 <th bgcolor="#CCCCCC">Tgl Daftar</th>
+                                <th bgcolor="#CCCCCC">Jam Daftar</th>
                                 <th bgcolor="#CCCCCC">&nbsp;Kunjungan&nbsp;</th>                                    
                                 <th bgcolor="#CCCCCC">Petugas</th>
                             </tr>
@@ -75,13 +77,15 @@
                                 ?>
                                 <tr height="22" align="center">
                                     <td><?= $no ?></td>
-                                    <td>&nbsp;<?= $b->nis_nik ?>&nbsp;</td>
+                                    <td>&nbsp;<?= $b->no_rm ?>&nbsp;</td>
                                     <td>&nbsp;<?= $b->pasien ?>&nbsp;</td>
                                     <td>&nbsp;<?= $b->alamat ?>&nbsp;</td>
+                                    <td><?= $b->tgl_lahir ?></td>
                                     <td><?= $b->usia ?></td>
                                     <td><?= $b->kelamin ?></td>
                                     <td><?= $b->daerah ?></td>
-                                    <td>&nbsp;<?= $b->tgl_daftar . " | " . $b->jam_daftar ?>&nbsp;</td>
+                                    <td>&nbsp;<?= $b->tgl_daftar?>&nbsp;</td>
+                                    <td>&nbsp;<?= $b->jam_daftar?>&nbsp;</td>
                                     <td><?= $b->poli ?></td>
                                     <td><?= $b->petugas ?></td>
                                 </tr>

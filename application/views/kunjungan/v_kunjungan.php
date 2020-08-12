@@ -45,6 +45,7 @@
                                     <th>Kelamin</th>
                                     <th>Status</th>
                                     <th>Tgl Daftar</th>
+                                    <th>Jam Daftar</th>
                                     <th>Kunjungan</th>                                    
                                     <th>Aksi</th>
                                 </tr>
@@ -61,8 +62,11 @@
                                     <td><?= $b->usia ?></td>
                                     <td><?= $b->kelamin ?></td>
                                     <td><?= $b->status?></td>
-                                    <td><?= $b->tgl_daftar." | ".$b->jam_daftar ?></td>
+                                    <td><?php $date = date_create($b->tgl_daftar); 
+                                    echo date_format($date, 'd-m-Y');?></td>
+                                       <td><?= $b->jam_daftar?></td>
                                     <td><?= $b->poli ?></td>
+                                    
                                     <td>
                                         <!--<a href="<?php //echo base_url() . 'c_pasien/detail/' . $b->id_pasien ?>" class="btn btn-rounded btn-primary mb-3"><i class="icon fa fa-clipboard"></i> Detail</a> |--> 
                                         <a href="<?= base_url() . 'C_daftar/detail/' . $b->id_pendaftaran ?>" class="btn btn-rounded btn-success mb-3"><i class="icon fa fa-clipboard"></i> Detail</a> | 

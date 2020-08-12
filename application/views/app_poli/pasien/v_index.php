@@ -1,5 +1,5 @@
-<!-- <div class="main-content-inner">
-    <div class="row"> -->
+<div class="main-content-inner">
+    <div class="row">
 
         <!-- Primary table start -->
         <div class="col-14 mt-5">
@@ -27,8 +27,10 @@
                             <thead class="text-capitalize">
                                 <!-- <tr> -->
                                     <th>No</th>
+                                    <th>No_RM</th>
                                     <th>Nama</th>
                                     <th>Alamat</th>
+                                    <th>Tgl_Lahir</th>
                                     <th>Status</th>       
                                     <th>Kelamin</th>
                                     <th>Daerah</th>
@@ -43,8 +45,10 @@
                                     ?>
                                     <tr>
                                         <td><?= $no ?></td>
+                                        <td><?= $b->no_rm ?></td>
                                         <td><?= $b->nama ?></td>
                                         <td><?= $b->alamat ?></td>
+                                        <td><?= $b->tgl_lahir ?></td>
                                         <td><?= $b->status ?></td>
                                         <td><?= $b->kelamin ?></td>
                                         <td><?= $b->daerah ?></td>
@@ -68,5 +72,6 @@
             </div>
         </div>
         <!-- Primary table end -->                    
-    <!-- </div>
-</div> -->
+    </div>
+</div>
+                            </div>

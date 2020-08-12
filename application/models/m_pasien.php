@@ -4,7 +4,7 @@ class M_pasien extends CI_Model {
     
     
     public function semua_data() {
-        return $this->db->order_by('nama', 'asc')
+        return $this->db->order_by('id_pasien', 'desc')
                         ->get('tb_pasien')
                         ->result();
     }
@@ -29,24 +29,26 @@ class M_pasien extends CI_Model {
     
     public function tambah() {
         $data = array(
-            'nis_nik'        => $this->input->post('nis_nik'),
+            'no_rm'       => $this->input->post('no_rm'),
             'nama'        => $this->input->post('nama'),
             'alamat'      => $this->input->post('alamat'),
+            'tgl_lahir'   => $this->input->post('tgl_lahir'),
             'usia'        => $this->input->post('usia'),
             'kelamin'     => $this->input->post('kelamin'),
             'status'      => $this->input->post('status'),
             'daerah'      => $this->input->post('daerah'),
-            'wilayah'      => $this->input->post('wilayah'),
-            'pendidikan'      => $this->input->post('pendidikan')
+            'wilayah'     => $this->input->post('wilayah'),
+            'pendidikan'  => $this->input->post('pendidikan')
         );
         $this->db->insert('tb_pasien', $data);        
     }
     
     public function edit($id) {
         $data = array(
-            'nis_nik'        => $this->input->post('nis_nik'),
+            'no_rm'        => $this->input->post('no_rm'),
             'nama'        => $this->input->post('nama'),
             'alamat'      => $this->input->post('alamat'),
+            'tgl_lahir'      => $this->input->post('tgl_lahir'),
             'usia'        => $this->input->post('usia'),
             'kelamin'     => $this->input->post('kelamin'),
             'status'   => $this->input->post('status'),

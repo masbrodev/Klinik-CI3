@@ -61,16 +61,6 @@ class C_app_poli extends CI_Controller {
     // print_r($data['pasien']);
     }
 
-//    public function rekammedis(){
-//     $data['judul1'] = 'Rekam Medis';
-//     $data['judul2'] = 'Detail';
-//     $data['j'] = $this->M_rekammedis->semua_data();
-//     // $data['j'] = $this->M_rekammedis->joinps();
-//     $data['contents'] = 'app_poli/v_rekammedis';
-//     $this->load->view('app_poli/v_template_poli', $data);
-//     // print_r($data['j']);
-//    }
-
    public function simpan_rm(){
 
     if ($this->input->post('bt_simpan')) {
@@ -83,7 +73,6 @@ class C_app_poli extends CI_Controller {
         $id_poli = $this->session->userdata('id_poli');
         $data['judul1'] = 'Rekam Medis';
         $data['judul2'] = 'Detail Rekam Medis';
-        // $data['j'] = $this->M_rekammedis->semua_data();
         $data['j'] = $this->M_rekammedis->v_rekammedis($id_poli);
         $data['contents'] = 'app_poli/v_rekammedis';
         $this->load->view('app_poli/v_template_poli', $data);
@@ -91,9 +80,10 @@ class C_app_poli extends CI_Controller {
     }
 
     public function cetak() {
-        $id_rm = $this->session->userdata('id_rm');
-        $data['c'] = $this->M_rekammedis->detail2($id_rm);
+        // $id = $this->uri->segment(3);
+        $data['c'] = $this->M_rekammedis->detail2();
         $this->load->view('app_poli/v_cetak_obat', $data);
+        //    print_r($data['c']);
     }
 
    

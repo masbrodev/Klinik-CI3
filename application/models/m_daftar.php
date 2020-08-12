@@ -4,7 +4,7 @@ class M_daftar extends CI_Model {
     
     
     public function semua_data() {
-        return $this->db->order_by('nama', 'asc')
+        return $this->db->order_by('nama', 'desc')
                         ->get('tb_barang')
                         ->result();
     }
@@ -23,8 +23,8 @@ class M_daftar extends CI_Model {
     }
     
     public function detail2($id) {
-        return $this->db->query("SELECT a.id_pendaftaran, a.tgl_daftar, a.jam_daftar, a.keluhan, a.no_antrian, "
-                . "b.nama AS pasien,b.nis_nik, b.alamat, b.usia, b.kelamin, b.status, b.daerah, c.nama AS poli FROM "
+        return $this->db->query("SELECT a.id_pendaftaran, a.tgl_daftar, a.keluhan, a.no_antrian, "
+                . "b.nama AS pasien,b.no_rm, b.tgl_lahir, b.usia, b.kelamin, b.alamat, b.status,  c.nama AS poli FROM "
                 . "tb_pendaftaran a, tb_pasien b, tb_poli c WHERE a.id_pasien=b.id_pasien AND "
                 . "a.id_poli=c.id_poli AND a.id_pendaftaran='$id'")
                         ->row();

@@ -19,6 +19,11 @@
                                     </tr>-->
                                 </thead>
                                 <tbody>
+                                <tr class="table-primary">
+                                        <th scope="row">No_Rm</th>
+                                        <td>:</td>
+                                        <td><?= $pasien->no_rm ?></td>
+                                    </tr>
                                     <tr class="table-primary">
                                         <th scope="row">Nama</th>
                                         <td>:</td>
@@ -28,6 +33,11 @@
                                         <th scope="row">Alamat</th>
                                         <td>:</td>
                                         <td><?= $pasien->alamat ?></td>                                        
+                                    </tr>
+                                    <tr class="table-primary">
+                                        <th scope="row">Tgl_Lahir</th>
+                                        <td>:</td>
+                                        <td><?= $pasien->tgl_lahir ?></td>
                                     </tr>
                                     <tr class="table-success">
                                         <th scope="row">Usia</th>
@@ -43,16 +53,6 @@
                                         <th scope="row">Status</th>
                                         <td>:</td>
                                         <td><?= $pasien->status ?></td>                                        
-                                    </tr>
-                                    <tr class="table-success">
-                                        <th scope="row">Daerah</th>
-                                        <td>:</td>
-                                        <td><?= $pasien->daerah ?></td>
-                                    </tr>
-                                    <tr class="table-success">
-                                        <th scope="row">Wilayah</th>
-                                        <td>:</td>
-                                        <td><?= $pasien->wilayah ?></td>
                                     </tr>
                                 </tbody>
                             </table>

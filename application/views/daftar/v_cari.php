@@ -29,13 +29,13 @@
                                 <thead class="text-capitalize">
                                     <tr>
                                         <th>No</th>
+                                        <th>No_Rm</th>
                                         <th>Nama</th>
-                                        <th>Alamat</th>
+                                        <th>Tgl_Lahir</th>
                                         <th>Usia</th>
                                         <th>Kelamin</th>
+                                        <th>Alamat</th>
                                         <th>Status</th>
-                                        <th>Daerah</th>
-                                        <th>Wilayah</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
@@ -46,13 +46,14 @@
                                         ?>
                                         <tr>
                                             <td><?= $no ?></td>
+                                            <td><?= $hasil->no_rm ?></td>
                                             <td><?= $hasil->nama ?></td>
-                                            <td><?= $hasil->alamat ?></td>
+                                            <td><?php $date = date_create($hasil->tgl_lahir);
+                                            echo date_format($date, 'd-m-Y');?></td>
                                             <td><?= $hasil->usia ?></td>
                                             <td><?= $hasil->kelamin ?></td>
+                                            <td><?= $hasil->alamat ?></td>
                                             <td><?= $hasil->status ?></td>
-                                            <td><?= $hasil->daerah ?></td>
-                                            <td><?= $hasil->wilayah ?></td>
                                             <td>
                                                 <!--<a href="<?php //echo base_url() . 'c_pasien/detail/' . $b->id_pasien   ?>" class="btn btn-rounded btn-primary mb-3"><i class="icon fa fa-clipboard"></i> Detail</a> |--> 
                                                 <a href="<?= base_url() . 'C_daftar/daftar/' . $hasil->id_pasien ?>" class="btn btn-rounded btn-success mb-3"><i class="icon fa fa-mouse-pointer"></i> Daftarkan</a>

@@ -4,7 +4,7 @@ class M_poli extends CI_Model {
            
     
     public function semua_data() {
-        return $this->db->order_by('nama', 'asc')
+        return $this->db->order_by('nama', 'desc')
                         ->get('tb_poli')
                         ->result();
     }        

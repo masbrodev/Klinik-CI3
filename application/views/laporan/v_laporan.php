@@ -48,13 +48,14 @@
                             <thead class="text-capitalize">
                                 <tr>
                                     <th>No</th>
-                                    <th>Nis\Nik</th>
+                                    <th>No_RM</th>
                                     <th>Nama</th>
                                     <th>Alamat</th>
                                     <th>Usia</th>
                                     <th>Kelamin</th>
                                     <th>Daerah</th>
                                     <th>Tgl Daftar</th>
+                                    <th>Jam Daftar</th>
                                     <th>Kunjungan</th>                                    
                                     <th>Petugas</th>
                                 </tr>
@@ -66,13 +67,14 @@
                                 ?>
                                 <tr>
                                     <td><?= $no ?></td>
-                                    <td><?= $b->nis_nik ?></td>
+                                    <td><?= $b->no_rm ?></td>
                                     <td><?= $b->pasien ?></td>
                                     <td><?= $b->alamat ?></td>
                                     <td><?= $b->usia ?></td>
                                     <td><?= $b->kelamin ?></td>
                                     <td><?= $b->daerah ?></td>
-                                    <td><?= $b->tgl_daftar." | ".$b->jam_daftar ?></td>
+                                    <td><?= $b->tgl_daftar?></td>
+                                    <td><?= $b->jam_daftar?></td>
                                     <td><?= $b->poli ?></td>
                                     <td><?= $b->petugas ?></td>
                                 </tr>

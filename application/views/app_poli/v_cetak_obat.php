@@ -75,12 +75,7 @@
                                 <td >&nbsp;R / <?= $c->terapy ?></td>
                                 <td colspan="2" align="right">&nbsp;Tanggal : <?php echo date('d F Y'); ?></td>
                             </tr>
-                            <!-- <tr height="90">
-                                <td>&nbsp;Pasien : <?= $c->pasien ?></td>
-                            </tr> -->
-                              <!-- <tr height="90">
-                                <td>&nbsp;Terapy : <strong><?= $c->terapy ?></strong></td>
-                            </tr> -->
+                          
                             <tr height="300">
                                 <td valign="bottom">&nbsp;<strong>Pro : <?= $c->pasien ?> </strong></td>
                             </tr>
@@ -97,44 +92,11 @@
                                 <td valign="bottom" color="#c90518">&nbsp;<strong>Obat tersebut tidak boleh diganti tanpa seijin dokter</strong></td>
                             </tr>
                             
-                           
-                            <!-- <tr height="20">
-                                <td align="center"></td>
-                                <td>&nbsp;Dokter</td>
-                                <td align="center">:</td>
-                                <td colspan="2">&nbsp;<strong><?= $c->nama_dokter ?></strong></td>
-                            </tr> -->
-                            <!-- <tr height="20">
-                                <td align="center"></td>
-                                <td>&nbsp;Bidang Poli</td>
-                                <td align="center">:</td>
-                                <td colspan="2">&nbsp;<strong><?= $this->session->userdata('nama') ?></strong></td>
-                            </tr> -->
                         </table>
                     </td>
                 </tr>
 
-                <!-- <tr>
-                    <td>
-                        <table border="0" cellpadding="5" cellspacing="5" width="100%">
-                            <tr height="20">
-                                <td></td>
-                                <td></td>
-                                <td>Paiton, <?php echo date('d F Y'); ?></td>
-                            </tr> -->
-                            <!-- <tr>
-                                <td width="20%"></td>
-                                <td></td>
-                                <td width="35%">Petugas,</td>
-                            </tr> -->
-                            <!-- <tr height="55">
-                                <td></td>
-                                <td valign="top" align='center' style="font-family: Monotype Corsiva; font-size: 25px; padding-top: 5px;"></td>
-                                <td valign="bottom"><strong>( <?= $this->session->userdata('username') ?> )</strong></td>
-                            </tr> -->
-                            <!-- <tr><!--  -->
-                                <!-- <td colspan="2" style="font-family: Monotype Corsiva; font-size: 14px;"><u>Catatan :</u> Simpan kuitansi bukti pembayaran ini dengan baik<br/> <b>- hijau untuk siswa &nbsp;&nbsp;&nbsp;- merah arsip madrasah</b></td>
-                            </tr> -->
+              
                         </table>
                     </td>
                 </tr>

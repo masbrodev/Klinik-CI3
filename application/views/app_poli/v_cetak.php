@@ -60,6 +60,7 @@
                                 <th bgcolor="#CCCCCC">Tgl Daftar</th>
                                 <th bgcolor="#CCCCCC" >No.RM</th>
                                 <th bgcolor="#CCCCCC" width="15%">Nama</th>
+                                <th bgcolor="#CCCCCC">Tgl_Lahir</th>
                                 <th bgcolor="#CCCCCC">Alamat</th>
                                 <th bgcolor="#CCCCCC">Status</th>
                                 <th bgcolor="#CCCCCC">Keluhan</th>
@@ -81,6 +82,7 @@
                                     <td>&nbsp;<?= $b->tgl_daftar?>&nbsp;</td>
                                     <td>&nbsp;<?= $b->no_rm ?>&nbsp;</td>
                                     <td>&nbsp;<?= $b->pasien ?>&nbsp;</td>
+                                    <td><?= $b->tgl_lahir ?></td>
                                     <td>&nbsp;<?= $b->alamat ?>&nbsp;</td>
                                     <td><?= $b->status ?></td>
                                     <td><?= $b->keluhan ?></td>

@@ -5,42 +5,41 @@ class M_kunjungan extends CI_Model {
     
     public function semua_data($tgl) {
         return $this->db->query("SELECT a.id_pendaftaran, a.tgl_daftar, a.jam_daftar, a.keluhan, a.no_antrian, "
-                . "b.nama AS pasien, b.alamat, b.usia, b.kelamin, b.daerah, b.status, c.nama AS poli FROM "
+                . "b.nama AS pasien,b.no_rm, b.alamat, b.usia, b.kelamin, b.status, b.daerah, c.nama AS poli FROM "
                 . "tb_pendaftaran a, tb_pasien b, tb_poli c WHERE a.id_pasien=b.id_pasien AND "
                 . "a.id_poli=c.id_poli AND a.tgl_daftar='$tgl'")
                         ->result();
     }
-
     
     public function cari() {
         $key = $this->input->post('ed_tanggal');
-        return $this->db->query("SELECT a.id_pendaftaran, a.tgl_daftar, a.jam_daftar, a.keluhan, a.no_antrian, "
-                . "b.nama AS pasien, b.alamat, b.usia, b.kelamin, b.daerah,b.status, c.nama AS poli FROM "
+        return $this->db->query("SELECT a.id_pendaftaran, a.tgl_daftar, a.jam_daftar,  a.keluhan, a.no_antrian, "
+                . "b.nama AS pasien, b.no_rm, b.alamat, b.usia, b.kelamin,  b.tgl_lahir, b.status, b.daerah, c.nama AS poli FROM "
                 . "tb_pendaftaran a, tb_pasien b, tb_poli c WHERE a.id_pasien=b.id_pasien AND "
                 . "a.id_poli=c.id_poli AND a.tgl_daftar LIKE '%$key%'")
-                ->result();
+                        ->result();
     }
     
     public function kunjungan($id_poli) {
-        return $this->db->query("SELECT a.id_pendaftaran, a.tgl_daftar, a.jam_daftar, a.keluhan, a.no_antrian, a.dibaca,"
-                . "b.nama AS pasien, b.alamat, b.usia, b.kelamin, b.daerah,b.status, c.nama AS poli FROM "
+        return $this->db->query("SELECT a.id_pendaftaran, a.tgl_daftar,a.jam_daftar, a.keluhan, a.no_antrian, a.dibaca,"
+                . "b.nama AS pasien, b.no_rm, b.alamat, b.usia, b.kelamin, b.tgl_lahir, b.status, b.daerah, c.nama AS poli FROM "
                 . "tb_pendaftaran a, tb_pasien b, tb_poli c WHERE a.id_pasien=b.id_pasien AND "
                 . "a.id_poli=c.id_poli AND a.id_poli='$id_poli' ORDER BY a.tgl_daftar DESC, a.no_antrian ASC")
                         ->result();
     }
     
-    // public function detail($id) {
-    //     return $this->db->where('id_barang', $id)
-    //                     ->get('tb_barang')
-    //                     ->row();
-    // }
+    public function detail($id) {
+        return $this->db->where('id_barang', $id)
+                        ->get('tb_barang')
+                        ->row();
+    }
     
-    public function detail2($id, $id_poli) {
-        return $this->db->query("SELECT a.id_pendaftaran, a.tgl_daftar, a.jam_daftar, a.keluhan, a.no_antrian,"
-                . "b.nama AS pasien, b.id_pasien, b.alamat, b.usia, b.kelamin, b.daerah,b.status, c.nama AS poli, c.username AS nama_dokter FROM "
+    public function detail2($id) {
+        return $this->db->query("SELECT a.id_pendaftaran, a.tgl_daftar, a.jam_daftar, a.keluhan, a.no_antrian, "
+                . "b.nama AS pasien, b.alamat, b.id_pasien, b.no_rm, b.usia, b.kelamin,  b.tgl_lahir, b.status, b.daerah, c.nama AS poli FROM "
                 . "tb_pendaftaran a, tb_pasien b, tb_poli c WHERE a.id_pasien=b.id_pasien AND "
-                . "a.id_poli=c.id_poli AND a.id_pendaftaran='$id' AND a.id_poli='$id_poli'")
-                ->row();
+                . "a.id_poli=c.id_poli AND a.id_pendaftaran='$id'")
+                        ->row();
     }
     
     public function update_kunjungan($id) {
@@ -91,7 +90,7 @@ class M_kunjungan extends CI_Model {
     }
     
     public function tambah($data) {
-//        $jaM_skg = date("H:i:s");	
+//        $jam_skg = date("H:i:s");	
 //	$tgl_skg = date("Y-m-d");
 //        $id_pasien = $this->input->post('id_pasien');
 //        $id_poli = $this->input->post('id_poli');        
@@ -102,7 +101,7 @@ class M_kunjungan extends CI_Model {
 //        $data = array(
 //            'id_pendaftaran' => $id_max,
 //            'tgl_daftar' => $tgl_skg,
-//            'jaM_daftar' => $jaM_skg,
+//            'jam_daftar' => $jam_skg,
 //            'id_pasien'  => $id_pasien,
 //            'keluhan'    => $this->input->post('keluhan'),
 //            'no_antrian' => $no_antrian,
@@ -125,7 +124,21 @@ class M_kunjungan extends CI_Model {
         return $jml;
     }
     
+    public function edit($id) {
+        $data = array(
+            'nama'        => $this->input->post('nama'),
+            'harga'       => $this->input->post('harga'),
+            'stok'        => $this->input->post('stok'),
+            'id_kategori' => $this->input->post('id_kategori')
+        );
+        $this->db->where('id_barang', $id);
+        $this->db->update('tb_barang', $data);        
+    }
     
+    public function hapus($id) {
+        $this->db->where('id_barang', $id)
+                 ->delete('tb_barang');
+    }
     
     
 }

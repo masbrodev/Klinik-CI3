@@ -41,16 +41,20 @@ class M_pasien2 extends CI_Model {
     //     $this->db->insert('tb_pasien', $data);        
     // }
     
+ 
     public function edit($id) {
         $data = array(
+            'no_rm'        => $this->input->post('no_rm'),
             'nama'        => $this->input->post('nama'),
             'alamat'      => $this->input->post('alamat'),
+            'tgl_lahir'   => $this->input->post('tgl_lahir'),
             'usia'        => $this->input->post('usia'),
             'kelamin'     => $this->input->post('kelamin'),
             'gol_darah'   => $this->input->post('gol_darah'),
             'daerah'      => $this->input->post('daerah'),
             'wilayah'      => $this->input->post('wilayah'),
             'pendidikan'      => $this->input->post('pendidikan')
+            
         );
         $this->db->where('id_pasien', $id);
         $this->db->update('tb_pasien', $data);        

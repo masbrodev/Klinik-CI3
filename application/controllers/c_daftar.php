@@ -41,8 +41,8 @@ class C_daftar extends CI_Controller {
     
     public function simpan_pendaftaran () {        
         $id_max = $this->M_daftar->get_id_max();
-        $jam_skg = date("H:i:s");	
 	    $tgl_skg = date("Y-m-d");
+	    $jam_daftar = date("H:i:s");
         $id_pasien = $this->input->post('id_pasien');
         $id_poli = $this->input->post('id_poli');        
         $no_antrian = $this->M_daftar->get_no_antri($id_poli, $tgl_skg);        
@@ -50,7 +50,7 @@ class C_daftar extends CI_Controller {
         $data = array(
             'id_pendaftaran' => $id_max,
             'tgl_daftar' => $tgl_skg,
-            'jam_daftar' => $jam_skg,
+            'jam_daftar' => $jam_daftar,
             'id_pasien'  => $id_pasien,
             'keluhan'    => $this->input->post('keluhan'),
             'no_antrian' => $no_antrian,
@@ -72,6 +72,8 @@ class C_daftar extends CI_Controller {
         $id = $this->uri->segment(3);
         $data['pasien'] = $this->M_daftar->detail2($id);
         $this->load->view('v_template', $data);
+
+        // print_r ($data['pasien']);
     }
     
     public function cetak() {

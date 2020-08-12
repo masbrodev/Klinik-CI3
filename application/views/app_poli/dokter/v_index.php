@@ -1,8 +1,8 @@
-<div class="main-content-inner">
-    <div class="row">
+<!-- <div class="main-content-inner">
+    <div class="row"> -->
 
         <!-- Primary table start -->
-        <div class="col-12 mt-5">
+        <div class="col-13 mt-5">
             <div class="card">
                 <div class="card-body">
                     <?php
@@ -63,5 +63,6 @@
             </div>
         </div>
         <!-- Primary table end -->                    
-    </div>
-</div>
+    <!-- </div>
+</div> -->
+                            <!-- </div> -->

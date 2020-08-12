@@ -2,7 +2,7 @@
     <div class="row">
 
         <!-- Primary table start -->
-        <div class="col-12 mt-5">
+        <div class="col-14 mt-5">
             <div class="card">
                 <div class="card-body">                                        
                     <!--<h4 class="header-title">Data Pasien</h4>-->                    
@@ -11,12 +11,13 @@
                             <thead class="text-capitalize">
                                 <tr>
                                     <th>No</th>
+                                    <th>No_RM</th>
                                     <th>Nama</th>
                                     <th>Alamat</th>
-                                    <th>Usia</th>
-                                    <th>Kelamin</th>
+                                    <th>Tgl_Lahir</th>
                                     <th>No.Antrian</th>
                                     <th>Tgl Daftar</th>
+                                    <th>Keluhan</th>
                                     <th>Kunjungan</th>   
                                     <th>Status</th>                                  
                                     <th>Aksi</th>
@@ -33,12 +34,15 @@
                                 }
                                 ?>                                
                                     <td><?= $no ?></td>
+                                    <td><?= $b->no_rm ?></td>
                                     <td><?= $b->pasien ?></td>
                                     <td><?= $b->alamat ?></td>
-                                    <td><?= $b->usia ?></td>
-                                    <td><?= $b->kelamin ?></td>
+                                    <td><?php $date = date_create($b->tgl_lahir);
+                                        echo date_format($date, 'd-m-Y');
+                                        ?></td>
                                     <td><h3><?= $b->no_antrian ?></h3></td>
                                     <td><strong><?= $b->tgl_daftar?></strong></td>
+                                    <td><?= $b->keluhan ?></td>
                                     <td><?= $b->poli ?></td>
                                     <td><?= $b->status ?></td>
                                     <td>

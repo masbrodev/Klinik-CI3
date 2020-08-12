@@ -8,6 +8,10 @@
                         <div class="card-body">
                             <!--<h4 class="header-title">Textual inputs</h4>-->                            
                             <!-- <form action="<?=  base_url().'C_pasien2/tambah'?>" method="post"> -->
+                            <div class="form-group">
+                                    <label for="example-text-input" class="col-form-label">No_RM</label>
+                                    <input class="form-control" type="text" name="nama" placeholder="no_rm" required="">
+                                </div>
                                 <div class="form-group">
                                     <label for="example-text-input" class="col-form-label">Nama Lengkap</label>
                                     <input class="form-control" type="text" name="nama" placeholder="Nama Lengkap" required="">
@@ -16,6 +20,10 @@
                                     <label for="example-search-input" class="col-form-label">Alamat</label>
                                     <input class="form-control" type="text" name="alamat" placeholder="Alamat" required="">
                                 </div>
+                                <div class="form-group">
+                                    <label for="example-email-input" class="col-form-label">Tanggal Lahir</label>
+                                    <input class="form-control" type="text" name="usia" placeholder="tgl_lahir" required="">
+                                </div>  
                                 <div class="form-group">
                                     <label for="example-email-input" class="col-form-label">Usia</label>
                                     <input class="form-control" type="text" name="usia" placeholder="Usia" required="">

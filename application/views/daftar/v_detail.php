@@ -15,14 +15,19 @@
                                         <td><?= $pasien->poli . " (" . $pasien->no_antrian . ")" ?></td>
                                     </tr>
                                     <tr class="table-danger">
+                                        <th scope="row">No_Rm</th>
+                                        <td>:</td>
+                                        <td><?= $pasien->no_rm ?></td>
+                                    </tr>
+                                    <tr class="table-danger">
                                         <th scope="row">Nama Pasien</th>
                                         <td>:</td>
                                         <td><?= $pasien->pasien ?></td>
                                     </tr>
-                                    <tr class="table-warning">
-                                        <th scope="row">Alamat</th>
+                                    <tr class="table-danger">
+                                        <th scope="row">Tgl_Lahir</th>
                                         <td>:</td>
-                                        <td><?= $pasien->alamat ?></td>                                      
+                                        <td><?= $pasien->tgl_lahir ?></td>
                                     </tr>
                                     <tr class="table-info">
                                         <th scope="row">Usia</th>
@@ -34,6 +39,11 @@
                                         <th scope="row">Kelamin</th>
                                         <td>:</td>
                                         <td><?= $pasien->kelamin ?></td>
+                                    </tr>
+                                    <tr class="table-warning">
+                                        <th scope="row">Alamat</th>
+                                        <td>:</td>
+                                        <td><?= $pasien->alamat ?></td>                                      
                                     </tr>
                                     <tr class="table-danger">
                                         <th scope="row">Status</th>

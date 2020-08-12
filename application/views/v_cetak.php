@@ -29,23 +29,23 @@
         </style>
     </head>
     <body>        
-        <table border="1" cellpadding="5" cellspacing="2" width="540" height="370" align="left">
+        <table border="1" cellpadding="4" cellspacing="2" width="350" height="200" align="left">
             <tr>
                 <td align="left" valign="top" colspan="2">
                     <!--===getHeader()=======================================================-->
                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                         <tr>
-                            <td width="30%" align="center">
+                            <td width="25%" align="center">
                                 <img src="<?php echo base_url() ?>assets/images/logos.png"/>
                             </td>
                             <td valign="top" align='left'>
-                                <font size="3" style="font-family: Georgia"><strong>KARTU NO ANTRIAN KLINIK AZ-ZAINIYAH</strong></font><br/>
-                                <font size="3" style="font-family: Georgia">PONDOK PESANTREN NURUL JADID</font><br/>
-                                <font size="3" style="font-family: Tahoma">PAITON PROBOLINGGO 2020</font><br/>
+                                <font size="2" style="font-family: Georgia"><strong>KARTU NO ANTRIAN KLINIK AZ-ZAINIYAH</strong></font><br/>
+                                <font size="2" style="font-family: Georgia">PONDOK PESANTREN NURUL JADID</font><br/>
+                                <font size="2" style="font-family: Tahoma">PAITON PROBOLINGGO 2020</font><br/>
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="3"><hr width="100%" /></td>
+                            <td colspan="4"><hr width="100%" /></td>
                         </tr>
                     </table>
                     <!--===endGetHeader()=======================================================-->                    
@@ -54,14 +54,14 @@
                     <table width="100%">
                         <tr>    	
                             <td>
-                                <table border="0" id="table" width="100%" cellpadding="0" style="border-collapse:collapse" cellspacing="0" >
+                                <table border="0" id="table" width="80%" cellpadding="0" style="border-collapse:collapse" cellspacing="0" >
                                     <tr>
                                         <td valign="top">
                                             <table border="0" cellpadding="0" style="border-collapse:collapse" cellspacing="0" width="100%">
-<!--                                                <tr  height="30">
+                                               <!-- <tr  height="30">
                                                     <td align="center" bgcolor="#CCCCCC"><strong>A. </strong></td>
                                                     <td style="padding-left: 5px" bgcolor="#CCCCCC" colspan="5"><strong>PROGRAM PEMINATAN</strong></td>
-                                                </tr>-->
+                                                </tr> -->
                                                 <tr height="20">
                                                     <td rowspan="7" width="5%"></td>
                                                     <td align="center" width="5%"></td>
@@ -69,48 +69,7 @@
                                                     <td align="center" width="2%">:</td>
                                                     <td colspan="2">&nbsp;<strong><?= $pasien->poli . " (" . $pasien->no_antrian . ")" ?></strong></td>
                                                 </tr>
-                                                <tr height="20">
-                                                    <td align="center"></td>
-                                                    <td>&nbsp;Nis\Nik</td>
-                                                    <td align="center">:</td>
-                                                    <td colspan="2">&nbsp;<strong><?= $pasien->nis_nik?></strong></td>
-                                                </tr>
-                                                <tr height="20">
-                                                    <td align="center"></td>
-                                                    <td>&nbsp;Nama Pasien</td>
-                                                    <td align="center">:</td>
-                                                    <td colspan="2">&nbsp;<strong><?= $pasien->pasien ?></strong></td>
-                                                </tr>
-                                                <tr height="20">                                                                                                    
-                                                    <td align="center"></td>
-                                                    <td>&nbsp;Alamat</td>
-                                                    <td align="center">:</td>
-                                                    <td colspan="2">&nbsp;<strong><?= $pasien->alamat ?></strong></td>
-                                                </tr>
-                                                <tr height="20">
-                                                    <td align="center"></td>
-                                                    <td>&nbsp;Usia</td>
-                                                    <td align="center">:</td>
-                                                    <td colspan="2">&nbsp;<strong><?= $pasien->usia . " tahun" ?></strong></td>
-                                                </tr>
-                                                <tr height="20">
-                                                    <td align="center"></td>
-                                                    <td>&nbsp;Kelamin</td>
-                                                    <td align="center">:</td>
-                                                    <td colspan="2">&nbsp;<strong><?= $pasien->kelamin ?></strong></td>
-                                                </tr>
-                                                <tr height="20">
-                                                    <td align="center"></td>
-                                                    <td>&nbsp;Keluhan</td>
-                                                    <td align="center">:</td>
-                                                    <td colspan="2">&nbsp;<strong><?= $pasien->keluhan ?></strong></td>
-                                                </tr>
-                                                <tr height="20">
-                                                    <td align="center"></td>
-                                                    <td>&nbsp;Keluhan</td>
-                                                    <td align="center">:</td>
-                                                    <td colspan="2">&nbsp;<strong><?= $pasien->poli ?></strong></td>
-                                                </tr>
+                                               
                                             </table>
                                         </td>
                                     </tr>
@@ -124,11 +83,11 @@
                                                     <td>Paiton, <?php echo date('d F Y'); ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td width="20%"></td>
+                                                    <td width="30%"></td>
                                                     <td></td>
-                                                    <td width="35%">Petugas,</td>
+                                                    <td width="40%">Petugas,</td>
                                                 </tr>
-                                                <tr height="55">
+                                                <tr height="35">
                                                     <td></td>
                                                     <td valign="top" align='center' style="font-family: Monotype Corsiva; font-size: 25px; padding-top: 5px;"></td>
                                                     <td valign="bottom"><strong>( <?= $this->session->userdata('nama') ?> )</strong></td>
